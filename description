@@ -1,0 +1,30 @@
+strategy description
+1) calculate cpr (formula to be calculated and designed by the developer)
+2) ema1 & ema2 user defined
+3) functionality to place intraday and position trades
+4) if the chart time frame is less than 1-hour cpr will be the daily time frame
+5) if the chart time frame is 1 hour CPR will be 1 week
+6) if the chart time frame is daily CPR will be 1 month
+
+
+buy condition
+1) previous day price should be below CPR
+2)candle should open and closed  above CPR and ema 1
+3)The volume of the present candle should be greater than the average volume of 20 bars(user-defined)
+
+exit buy:
+1) ema1 cross bellow ema 2 and candle has to close below ema 1
+
+
+
+sell condition
+1) previous day price should be above CPR
+2)The candle should open and closed  below CPR and ema 1
+3)The volume of the present candle should be greater than the average volume of 20 bars(user-defined)
+
+exit sell:
+1) ema1 cross above ema 2 and the candle has to close above ema 1
+
+For sell entry.. it should be intraday.. for long or buy entry it can be intraday to positional.
+
+Stop loss for long entry : below CPR or any below Ema 2
